@@ -76,7 +76,7 @@ Serial.printf("mac : %02X:%02X:%02X:%02X:%02X:%02X\n",
   
   
   
-##Version
-  
+Version
+----- 
 1.0  Ven.Phaisarn Techajaruwong  (TridentTD)  
 21 November 2560 Buddism Era ( 2017 )  
