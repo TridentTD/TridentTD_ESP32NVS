@@ -1,5 +1,5 @@
-##[TridentTD] ไลบรารี่ ESP32 NVS 
-#TridentTD_ESP32NVS
+TridentTD_ESP32NVS Library
+==========================
 
 **TridentTD_ESP32NVS** เป็นไลบรารี่ สำหรับ ESP32 บน Arduino Platform
 สำหรับการจัดเก็บค่าของตัวแปรไว้บน พื้นที่ NVS (Non-volatile storage)  บน ESP32 
