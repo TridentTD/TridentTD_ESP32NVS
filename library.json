@@ -1,0 +1,17 @@
+{
+  "name": "TridentTD_ESP32NVS",
+  "keywords": "NVS, ESP32, Non-volatile storage",
+  "description": "A library for ESP32 NVS (Non-volatile storage)",
+  "homepage": "https://github.com/TridentTD/TridentTD_ESP32NVS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TridentTD/TridentTD_ESP32NVS"
+  },
+  "version": "1.0",
+  "authors": {
+    "name": "TridentTD",
+    "url": "https://github.com/TridentTD/"
+  },
+  "frameworks": "arduino",
+  "platforms": "esp32"
+}
