@@ -25,8 +25,18 @@ void setup() {
   Serial.print("Key 'DISTANCE'  exists? : "); Serial.println( NVS.exists("DISTANCE"));
   Serial.print("Key 'DISTANCE2' exists? : "); Serial.println( NVS.exists("DISTANCE2"));
 
+  if(!NVS.exists("BRIGHTNESS")){
+    NVS.setInt("BRIGHTNESS", (uint8_t) 128 );
+  }
+
+  uint8_t brightness =  (uint8_t) NVS.getInt("BRIGHTNESS");
+  Serial.printf("brightness  : %d\n", brightness );
+
+  NVS.erase("BRIGHTNESS");
 }
 
 void loop() {
   delay(1);
 }
+
+
