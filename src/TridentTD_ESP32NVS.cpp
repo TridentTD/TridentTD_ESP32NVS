@@ -196,7 +196,7 @@ float TridentTD_ESP32NVS::getFloat(String key){
   return *pFloat;
 }
 
-bool TridentTD_ESP32NVS::isExist(String key){
+bool TridentTD_ESP32NVS::exists(String key){
   uint8_t   v_u8;
   int16_t   v_i16;
   uint16_t  v_u16;

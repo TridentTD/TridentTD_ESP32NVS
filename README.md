@@ -80,3 +80,6 @@ Version
 ----- 
 1.0  TridentTD  
 21 November 2560 Buddism Era ( 2017 )  
+  
+1.1 TridentTD : add exists() function  
+22 December 2561 Buddism Era ( 2018 )  

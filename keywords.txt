@@ -36,7 +36,7 @@ getCharArray	KEYWORD2
 getString	KEYWORD2
 getObject	KEYWORD2
 
-isExist	KEYWORD2
+exists	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

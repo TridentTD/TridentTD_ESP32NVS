@@ -77,7 +77,7 @@ public:
   char*   getCharArray(String key);
   void*   getObject(String key);
 
-  bool    isExist(String key);      //V.1.1 added
+  bool    exists(String key);      //V.1.1 added
 
 //  bool    setDouble(String key, double value);
 //  double  getDouble(String key);
