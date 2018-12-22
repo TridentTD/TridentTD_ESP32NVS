@@ -19,6 +19,12 @@ void setup() {
   Serial.printf("distance    : %d cm\n", distance );
   Serial.printf("temperature : %.5f C\n", temperature );
 
+  Serial.println();
+  Serial.print("Key 'SSID'  is exist?     : "); Serial.println( NVS.isExist("SSID"));
+  Serial.print("Key 'SSID2' is exist?     : "); Serial.println( NVS.isExist("SSID2"));
+  Serial.print("Key 'DISTANCE'  is exist? : "); Serial.println( NVS.isExist("DISTANCE"));
+  Serial.print("Key 'DISTANCE2' is exist? : "); Serial.println( NVS.isExist("DISTANCE2"));
+  
 }
 
 void loop() {

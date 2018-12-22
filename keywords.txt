@@ -3,8 +3,9 @@
 #######################################
 
 #######################################
-# Datatypes (KEY
+# Datatypes (KEY)
 #######################################
+TridentTD_ESP32NVS	KEYWORD3
 
 NVS	KEYWORD1
 
@@ -30,6 +31,7 @@ getCharArray	KEYWORD2
 getString	KEYWORD2
 getObject	KEYWORD2
 
+isExist	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

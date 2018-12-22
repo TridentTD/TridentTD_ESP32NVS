@@ -1,6 +1,12 @@
 // TridentTD_TridentTD_ESP32NVS.cpp
 
-// Copyright (c) 2016-2017 TridentTD
+// Copyright (c) 2016-2018 TridentTD
+
+// History : 
+// V.1.0  @ 21/11/2560 Buddism Era ( 2017 )   by TridentTD
+//        First release
+// V.1.1  @ 22/12/2561 Buddism Era ( 2018 )   by TridentTD
+//        Support isExist() for checking key is exist on NVS or not?
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -189,6 +195,47 @@ float TridentTD_ESP32NVS::getFloat(String key){
   float *pFloat = (float*) getObject(key);
   return *pFloat;
 }
+
+bool TridentTD_ESP32NVS::isExist(String key){
+  uint8_t   v_u8;
+  int16_t   v_i16;
+  uint16_t  v_u16;
+  int32_t   v_i32;
+  uint32_t  v_u32;
+  int64_t   v_i64;
+  uint64_t  v_u64;
+
+  _err = nvs_get_u8(_nvs_handle, (char*)key.c_str(), &v_u8);
+  if(_err == ESP_OK) return true;
+
+  _err = nvs_get_i16(_nvs_handle, (char*)key.c_str(), &v_i16);
+  if(_err == ESP_OK) return true;
+
+  _err = nvs_get_u16(_nvs_handle, (char*)key.c_str(), &v_u16);
+  if(_err == ESP_OK) return true;
+
+  _err = nvs_get_i32(_nvs_handle, (char*)key.c_str(), &v_i32);
+  if(_err == ESP_OK) return true;
+
+  _err = nvs_get_u32(_nvs_handle, (char*)key.c_str(), &v_u32);
+  if(_err == ESP_OK) return true;
+
+  _err = nvs_get_i64(_nvs_handle, (char*)key.c_str(), &v_i64);
+  if(_err == ESP_OK) return true;
+
+  _err = nvs_get_u64(_nvs_handle, (char*)key.c_str(), &v_u64);
+  if(_err == ESP_OK) return true;
+
+  size_t required_size;
+  _err = nvs_get_str(_nvs_handle, key.c_str(), NULL, &required_size);
+  if(_err == ESP_OK) return true;
+
+  _err = nvs_get_blob(_nvs_handle, key.c_str(), NULL, &required_size);
+  if(_err == ESP_OK) return true;
+
+  return false;
+}
+
 
 // bool TridentTD_ESP32NVS::setDouble(String key, double value){
 //   return setObject( key, &value, sizeof(double));

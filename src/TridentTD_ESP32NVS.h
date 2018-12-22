@@ -1,6 +1,12 @@
 // TridentTD_TridentTD_ESP32NVS.h
 
-// Copyright (c) 2016-2017 TridentTD
+// Copyright (c) 2016-2018 TridentTD
+
+// History : 
+// V.1.0  @ 21/11/2560 Buddism Era ( 2017 )   by TridentTD
+//        First release
+// V.1.1  @ 22/12/2561 Buddism Era ( 2018 )   by TridentTD
+//        Support isExist() for checking key is exist on NVS or not?
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -71,6 +77,8 @@ public:
   char*   getCharArray(String key);
   void*   getObject(String key);
 
+  bool    isExist(String key);      //V.1.1 added
+
 //  bool    setDouble(String key, double value);
 //  double  getDouble(String key);
 
@@ -80,6 +88,7 @@ private:
 
   bool        commit();
   nvs_handle  get_nvs_handle();
+  String      _version = "1.1";
 };
 
 extern TridentTD_ESP32NVS NVS;
